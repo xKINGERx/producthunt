@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style = margin-left:45%> Sign up </h1>
+<br />
+<form method="post" action={% url 'signup' %} style = margin-left:43%>
+{{ error }} <br/>
+{% csrf_token  %}
+Username: <br />
+<input type = 'text' name = 'username' />
+<br />
+
+
+Password: <br />
+<input type = 'password' name = 'password' />
+<br />
+
+Conform Password: <br />
+<input type = 'password' name = 'password2' />
+<br />
+<br />
+<input class="btn btn-primary" type="submit" value="Sign Up!">
+
+</form>
+{% endblock %}
